@@ -8,6 +8,7 @@ import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.UUID;
 
 @Component
 @Slf4j
@@ -32,11 +33,11 @@ public class DataInitializer {
     private List<Student> initializeStudents() {
 
         return List.of(
-                new Student(null, "toto1"),
-                new Student(null, "toto2"),
-                new Student(null, "toto3"),
-                new Student(null, "toto4"),
-                new Student(null, "toto5")
+                new Student(UUID.randomUUID().toString(), "toto1"),
+                new Student(UUID.randomUUID().toString(), "toto2"),
+                new Student(UUID.randomUUID().toString(), "toto3"),
+                new Student(UUID.randomUUID().toString(), "toto4"),
+                new Student(UUID.randomUUID().toString(), "toto5")
         );
     }
 }
